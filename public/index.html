@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Management - National Museums of Kenya</title>
+
+    <link rel="icon" href="https://museums.or.ke/wp-content/uploads/2023/12/logo.png" type="image/png">
+    <style>
+        /* Custom Scrollbar for comments and tables */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Responsive table cells - Keep these if you want these specific responsive behaviors */
+        @media screen and (max-width: 768px) {
+            /* General table styling for small screens */
+            table {
+                border: 0;
+            }
+            table thead {
+                display: none; /* Hide table header on small screens */
+            }
+            table tr {
+                display: block; /* Make table rows behave like blocks */
+                margin-bottom: 1rem;
+                border: 1px solid #ddd; /* Add border to rows */
+                border-radius: 0.5rem;
+                background-color: #fff;
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            }
+            table td {
+                display: flex; /* Use flexbox for table cells */
+                justify-content: space-between; /* Space out content and label */
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid #eee; /* Separator for cells */
+                font-size: 0.9rem;
+                text-align: right;
+            }
+            table td:last-child {
+                border-bottom: 0; /* No border for the last cell */
+            }
+            table td::before {
+                content: attr(data-label); /* Use data-label for content before cell */
+                font-weight: 600;
+                text-transform: uppercase;
+                flex-basis: 50%; /* Adjust basis for label */
+                text-align: left;
+            }
+        }
+    </style>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.1/dist/jspdf.plugin.autotable.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="text/babel" src="index.js"></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+    <div id="root"></div>
+</body>
+</html>
